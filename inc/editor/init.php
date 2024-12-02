@@ -1,1 +1,3 @@
-require_once = 'editor/list.php';
+<?php
+
+require_once 'meta/list.php';
