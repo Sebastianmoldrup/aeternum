@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "settings": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "appearanceTools": true,
+    "color": {
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#0073aa"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "#005177"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "12px"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "24px"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    }
+  }
+}
