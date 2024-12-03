@@ -1,4 +1,4 @@
 <?php
 
-require_once 'inc/editor/init.php';
-require_once 'inc/posts/init.php';
+include_once 'inc/posts/init.php';
+include_once 'inc/exc/menu.php';

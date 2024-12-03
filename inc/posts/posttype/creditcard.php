@@ -22,14 +22,23 @@ function post_creditcard()
       'public' => false,
       'show_ui' => true,
       'show_in_menu' => true,
-      'menu_position' => 2,
       'capability_type' => 'post',
       'menu_icon' => 'dashicons-money-alt',
-      'supports' => ['title', 'thumbnail', 'author']
+      'supports' => [
+        'title',
+        'editor',
+        'excerpt',
+        'thumbnail',
+        'revisions'
+      ],
+      'menu_position' => 5,
+      'exclude_from_search' => false
     ];
 
+    register_post_type('creditcards', $args);
+
     /* categories */
-    register_taxonomy('creditcard_taxonomy', 'creditcards', [
+    register_taxonomy('cards', 'card', [
       'public' => false,
       'show_ui' => true,
       'show_admin_column' => true,
@@ -40,17 +49,7 @@ function post_creditcard()
         'separate_items_with_commas' => 'Separate categories with commas',
         'choose_from_most_used' => 'Choose from the most used categories'
       ]
-   ]);
-
-    register_post_type('creditcards', $args);
+    ]);
 }
+
 add_action('init', 'post_creditcard');
-
-function remove_post_type_support_creditcards()
-{
-    remove_post_type_support('creditcards', 'editor');
-    remove_post_type_support('creditcards', 'excerpt');
-}
-
-// add_action('init', 'remove_post_type_support_creditcards');
-add_action('add_meta_boxes', 'remove_post_type_support_creditcards', 11);
